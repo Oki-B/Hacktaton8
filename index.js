@@ -1,40 +1,64 @@
-let questionList = [
-`function`,
-`object`,
-`list`,
-`looping`,
-`grouping`,
-`sorting`,
-`assign`,
-`parameter`
-]
+let startButton = document.getElementById("start-btn");
+let inputBox = document.getElementById("input-box");
+let textDisplay = document.getElementById("text");
+let timerDisplay = document.getElementById("timer");
+let speedDisplay = document.getElementById("speed");
 
-let i = 0;
-function gameStart () {
+let textToType = "Selamat datang di permainan 10 Fast Fingers!";
+let timer;
+let timeLeft = 0;
+let speed = 0;
+let wordCount = 0;
+let startTime = 0;
 
-    document.querySelector(`#question`).innerText = questionList[i];
-    i++;
+startButton.addEventListener("click", startGame);
+inputBox.addEventListener("input", checkInput);
+
+function startGame() {
+    // Reset game state
+    inputBox.value = "";
+    inputBox.disabled = false;
+    timeLeft = 0;
+    wordCount = 0;
+    speed = 0;
+    startTime = Date.now();
+    speedDisplay.textContent = speed;
+    timerDisplay.textContent = timeLeft;
+
+    textDisplay.textContent = textToType;
+    startButton.disabled = true;
+
+    // Start timer
+    timer = setInterval(updateTimer, 1000);
 }
 
-function wrongAnswer() {
-    document.querySelector(`#question`).style.color = "darkslategray";
-}
+function updateTimer() {
+    timeLeft = Math.floor((Date.now() - startTime) / 1000);
+    timerDisplay.textContent = timeLeft;
 
-gameStart();
-
-function myFunction(event) {
-    let key = event.key;
-    let check = document.querySelector(`#question`).innerText;
-    let test = document.querySelector(`#user-type`).value;
-    // document.querySelector(`#question`).innerText = key;
-    if (key === "Enter") {
-        if (test === check) { // kalau benar
-            gameStart();
-        } else { // kalau salah
-            document.querySelector(`#question`).style.color = "Red";
-            setTimeout(wrongAnswer, 300);
-        }
-        document.querySelector(`#user-type`).value = "";
+    if (timeLeft >= 60) {
+        endGame();
     }
 }
 
+function checkInput() {
+    let inputValue = inputBox.value.trim();
+
+    if (inputValue === textToType) {
+        wordCount++;
+        speed = Math.floor((wordCount / timeLeft) * 60); // Words per minute
+        speedDisplay.textContent = speed;
+
+        textDisplay.textContent = "Selamat! Anda berhasil mengetik dengan benar!";
+        inputBox.disabled = true;
+        clearInterval(timer);
+        startButton.disabled = false;
+    }
+}
+
+function endGame() {
+    clearInterval(timer);
+    textDisplay.textContent = "Waktu habis! Anda selesai!";
+    inputBox.disabled = true;
+    startButton.disabled = false;
+}
