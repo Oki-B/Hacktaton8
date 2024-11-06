@@ -1,0 +1,20 @@
+.container {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-type {
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.top-label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color:darkslategray;
+}
