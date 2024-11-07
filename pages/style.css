@@ -1,0 +1,69 @@
+
+
+body {
+    background-color: #FCF596;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+    margin: 0;
+}
+
+.game-set {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-type {
+    width: 75%;
+    height: 25%;
+    background-color: #ebdaae;
+    padding: 5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#user-type {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.top-label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    color:#FF4545;
+}
+#question {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 3rem;
+    color:#161010;
+    border: 1px solid;
+}
+
+#score-num, #time-num {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    color: #FF4545;
+}

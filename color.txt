@@ -1,0 +1,7 @@
+
+main color :
+
+#FCF596
+#FBD288
+#FF9C73
+#FF4545
