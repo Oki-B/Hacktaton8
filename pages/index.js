@@ -35,7 +35,7 @@ function myFunction(event) {
         document.querySelector(`#user-type`).value = "";
     }
 }
-let j = 60;
+let j = 3;
 let duration;
 function timedown() {
     document.querySelector("#time-num").innerText = j;
@@ -51,5 +51,6 @@ function gameTik(){
     if ( j > 0) {
        duration = setInterval(`timedown()`, 1000);
     }
+    
 }
 
