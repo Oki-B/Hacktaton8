@@ -5,51 +5,51 @@ let questionList = [
 
   console.log(questionList.length);
   
-// document.querySelector(`#score-num`).innerText = 0;
-// let i = 0;
-// function gameStart () {
+document.querySelector(`#score-num`).innerText = 0;
+let i = 0;
+function gameStart () {
 
-//     document.querySelector(`#question`).innerText = questionList[i];
-//     i++;
-// }
+    document.querySelector(`#question`).innerText = questionList[i];
+    i++;
+}
 
-// function wrongAnswer() {
-//     document.querySelector(`#question`).style.color = "darkslategray";
-// }
+function wrongAnswer() {
+    document.querySelector(`#question`).style.color = "darkslategray";
+}
 
-// gameStart();
+gameStart();
 
-// function myFunction(event) {
-//     let key = event.key;
-//     let check = document.querySelector(`#question`).innerText;
-//     let test = document.querySelector(`#user-type`).value;
-//     // document.querySelector(`#question`).innerText = key;
-//     if (key === "Enter") {
-//         if (test === check) { // kalau benar
-//             gameStart();
-//             document.querySelector(`#score-num`).innerText = Number(document.querySelector(`#score-num`).innerText) + check.length;
-//         } else { // kalau salah
-//             document.querySelector(`#question`).style.color = "Red";
-//             setTimeout(wrongAnswer, 300);
-//         }
-//         document.querySelector(`#user-type`).value = "";
-//     }
-// }
-// let j = 3;
-// let duration;
-// function timedown() {
-//     document.querySelector("#time-num").innerText = j;
-//     j--;
+function myFunction(event) {
+    let key = event.key;
+    let check = document.querySelector(`#question`).innerText;
+    let test = document.querySelector(`#user-type`).value;
+    // document.querySelector(`#question`).innerText = key;
+    if (key === "Enter") {
+        if (test === check) { // kalau benar
+            gameStart();
+            document.querySelector(`#score-num`).innerText = Number(document.querySelector(`#score-num`).innerText) + check.length;
+        } else { // kalau salah
+            document.querySelector(`#question`).style.color = "Red";
+            setTimeout(wrongAnswer, 300);
+        }
+        document.querySelector(`#user-type`).value = "";
+    }
+}
+let j = 60;
+let duration;
+function timedown() {
+    document.querySelector("#time-num").innerText = j;
+    j--;
    
-//     if(j === 0) { 
-//         document.getElementById("time-num").innerHTML ="0"
-//         clearInterval(duration);
-//     }
-// }
+    if(j === 0) { 
+        document.getElementById("time-num").innerHTML ="0"
+        clearInterval(duration);
+    }
+}
 
-// function gameTik(){        
-//     if ( j > 0) {
-//        duration = setInterval(`timedown()`, 1000);
-//     }
-// }
+function gameTik(){        
+    if ( j > 0) {
+       duration = setInterval(`timedown()`, 1000);
+    }
+}
 
