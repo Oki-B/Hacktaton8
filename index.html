@@ -6,19 +6,19 @@
     <title>Hacktype-8 Game</title>
     <link rel="stylesheet" href="landing.css">
 </head>
-<body>
+<body  style="background-color: rgb(130, 130, 207);">
 
-    <div class="container-main">
+    <div class="container-main" >
         <div class="container-login">
             <header>
                 <h1 id="title">Hacktyping</h1>
-                <img style="max-width: 200px;" src="./images/assset-logo-sementara-removebg-preview.png" alt="">
+                <img style="max-width: 200px;" src="./images/assset-logo-sementara-removebg-preview.png" alt="Hacktyping Logo" class="Logo">
                 <p class="instruction-text">Masuk untuk bermain!</p>
             </header>
             
-            <div class="login-box">
+            <div class="login-box" >
                 <h2>Login</h2>
-                <form>
+                <form action="#" method="POST">
                     <div class="input-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Masukkan username" required>
@@ -28,8 +28,8 @@
                         <input type="password" id="password" name="password" placeholder="Masukkan password" required>
                     </div>
                     <button type="submit" id="button-login">Masuk</button>
-                    <p>belum punya akun?</p>
-                    <button type="submit" id="button-register">Buat akun</button>
+                    <p class="resgister-text">belum punya akun?</p>
+                    <button type="submit" id="button-register" class="btn-secondary">Buat akun</button>
                 </form>
             </div>
         </div>    
@@ -37,25 +37,26 @@
             <h2>LEADER BOARD</h2>
             <div class="container-card">
                 <div class="card" id="top-1">
-                    <div class="profil-img"></div>
-                    <p>Username</p>
-                    <p>High Score</p>
-                    <p>2800 </p>
-                    <p>CPM</p>
+                    <img class="profil-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Xygo3GgVrE4NMyHAjKfFlvpVlY0jzBhWC63NcHpn4wWagz5In1JqNtRk-oB5wxVi9txVMQNa1paYpRka9MdDZTWewYNT93Ab57FHHA">
+                </img>
+                    <pc class="username">Username</p>
+                    <p class="score-title">High Score</p>
+                    <p class="score-value">2800 </p>
+                    <p class="cpm">CPM</p>
                 </div>
                 <div class="card" id="top-2">
-                    <div class="profil-img"></div>
-                    <p>Username</p>
-                    <p>High Score</p>
-                    <p>2800 </p>
-                    <p>CPM</p>
+                    <img class="profil-img" src="https://www.olx.co.id/news/wp-content/uploads/2024/09/scottish-fold-696x464.webp"></img>
+                    <p class="username">Username</p>
+                    <p class="score-title">High Score</p>
+                    <p class="score-value">2800 </p>
+                    <p class="cpm">CPM</p>
                 </div>
                 <div class="card" id="top-3">
-                    <div class="profil-img"></div>
-                    <p>Username</p>
-                    <p>High Score</p>
-                    <p>2800 </p>
-                    <p>CPM</p>
+                    <img class="profil-img" src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/65/2024/03/27/caracal-7750332_640-3548853278.jpg"></img>
+                    <p class="username">Username</p>
+                    <p class="score-title">High Score</p>
+                    <p class="score-value">2800 </p>
+                    <p class="cpm">CPM</p>
                 </div>
     
             </div>
