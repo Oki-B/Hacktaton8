@@ -58,6 +58,7 @@ h1 {
     color:#161010;
     border: 1px solid;
     border-radius: 20px;
+    background-color: white;
 }
 
 #score-num, #time-num {
@@ -67,4 +68,12 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 900;
     color: #FF4545;
+}
+
+.back{
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
 }

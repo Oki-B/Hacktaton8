@@ -1,3 +1,6 @@
+body{
+    background-image: url(https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?cs=srgb&dl=pexels-markusspiske-2004161.jpg&fm=jpg);
+}
 .container-main {
     display: flex;
     width: 100vw;
@@ -29,10 +32,10 @@
     height: 200px;
     border-radius: 50%;
 }
-.resgister-text{
-    color: white;  
-}
 
+/* .resgister-text{
+    color: white;  
+} */
 .container {
     display: flex;
     flex-direction: column;
@@ -44,7 +47,7 @@
 
     
 }
-.container-card {
+/* .container-card {
     display: flex;
     gap: 1rem;
 }
@@ -74,7 +77,7 @@
 #top-3 {
     margin-top: 40px;
     order: 3;
-}
+} */
 .form {
     background: transparent;
     padding: 2rem;

@@ -6,7 +6,7 @@
     <title>Hacktype-8 Game</title>
     <link rel="stylesheet" href="landing.css">
 </head>
-<body  style="background-color: rgb(130, 130, 207);">
+<body>
 
     <div class="container-main" >
         <div class="container-login">
@@ -15,10 +15,9 @@
                 <img style="max-width: 200px;" src="./images/title.png" alt="Hacktyping Logo" class="Logo">
                 <p class="instruction-text">Masuk untuk bermain!</p>
             </header>
-            
-            <div class="login-box" >
+            <div class="login-box" id="login-box">
                 <h2>Login</h2>
-                <form action="#" method="POST">
+                <form name="loginForm" onsubmit="return validated()">
                     <div class="input-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Masukkan username" required>
@@ -27,13 +26,30 @@
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Masukkan password" required>
                     </div>
-                    <button type="submit" id="button-login">Masuk</button>
-                    <p class="resgister-text">belum punya akun?</p>
-                    <button type="submit" id="button-register" class="btn-secondary">Buat akun</button>
+                    <button style="margin-bottom: 20px;" type="submit" id="button-login">Masuk</button>
+                    <!-- <p class="register-text">belum punya akun?</p> -->
+                    <button type="button" id="button-register" class="btn-secondary" onclick="showRegistrationForm()">Buat akun</button>
                 </form>
             </div>
-        </div>    
-        <div class="container" id="leader-board">
+            
+            <!-- Registration Form (initially hidden) -->
+            <div class="login-box" id="registration-box" style="display: none;">
+                <h2>Registrasi</h2>
+                <form name="registerForm" onsubmit="return registerUser()">
+                    <div class="input-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" name="reg-username" placeholder="Masukkan username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" name="reg-password" placeholder="Masukkan password" required>
+                    </div>
+                    <button type="submit" id="button-register-submit">Daftar</button>
+                    <p class="register-text">Sudah punya akun? <a href="javascript:void(0)" onclick="showLoginForm()">Login</a></p>
+                </form>
+            </div>
+           
+        <!-- <div class="container" id="leader-board">
             <h2 style="color: black;">LEADER BOARD</h2>
             <div class="container-card">
                 <div class="card" id="top-1">
@@ -61,10 +77,11 @@
     
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     
     
 </body>
+<script src="index.js"></script>
 </html>
