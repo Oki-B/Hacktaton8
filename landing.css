@@ -1,6 +1,8 @@
 body{
     background-image: url(https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?cs=srgb&dl=pexels-markusspiske-2004161.jpg&fm=jpg);
 }
+
+
 .container-main {
     display: flex;
     width: 100vw;
@@ -36,6 +38,7 @@ body{
 /* .resgister-text{
     color: white;  
 } */
+ 
 .container {
     display: flex;
     flex-direction: column;

@@ -74,6 +74,7 @@ let questionList = [
   document.querySelector(`#time-num`).innerText = timeLeft;
   
   function gameStart() {
+    
       document.querySelector(`#question`).innerText = questionList[i];
       i++;
   }
@@ -98,12 +99,19 @@ let questionList = [
       }
   }
   
+
+  let startMusic = document.getElementById("start-music");
   function gameTik() {
+    startMusic.play();
+    
       duration = setInterval(function () {
           timeLeft--;
           document.querySelector(`#time-num`).innerText = timeLeft;
           if (timeLeft === 0) {
               clearInterval(duration);
+
+              startMusic.pause();
+              startMusic.currentTime = 0; 
               alert("Waktu Habis! Skor Anda: " + score);
           }
       }, 1000);
