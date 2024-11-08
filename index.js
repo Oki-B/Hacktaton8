@@ -103,7 +103,7 @@ let questionList = [
   let startMusic = document.getElementById("start-music");
   function gameTik() {
     startMusic.play();
-    
+
       duration = setInterval(function () {
           timeLeft--;
           document.querySelector(`#time-num`).innerText = timeLeft;
@@ -117,5 +117,34 @@ let questionList = [
       }, 1000);
       gameStart();
   }
+function saveScore() {
+    let savedScores = JSON.parse(localStorage.getItem("scores")) || [];
+    savedScores.push(score);
+    localStorage.setItem("scores", JSON.stringify(savedScores));
+    alert("Score saved successfully!");
+}
 
+// Read (Show Saved Scores)
+function showScores() {
+    let savedScores = JSON.parse(localStorage.getItem("scores")) || [];
+    let scoreListElement = document.getElementById("scores");
+    scoreListElement.innerHTML = ""; // Clear current list
+
+    if (savedScores.length === 0) {
+        scoreListElement.innerHTML = "<li>No scores saved yet!</li>";
+    } else {
+        savedScores.forEach((savedScore, index) => {
+            let scoreItem = document.createElement("li");
+            scoreItem.textContent = `Score ${index + 1}: ${savedScore}`;
+            scoreListElement.appendChild(scoreItem);
+        });
+    }
+}
+
+// Delete (Clear All Saved Scores)
+function clearScores() {
+    localStorage.removeItem("scores");
+    showScores(); // Refresh the list to show that it's empty
+    alert("All scores have been cleared.");
+}
 

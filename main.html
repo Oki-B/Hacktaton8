@@ -29,9 +29,23 @@
             <label for="user-type" class="top-label">Type the word above</label>
             <input type="text" name="user-type" id="user-type" onkeydown="myFunction(event)">
         </div>
-        <button id="start-game" onclick="gameTik()">START GAME</button>
-    </div>
+        <button  id="start-game" onclick="gameTik()">START GAME</button>
 
+    </div>
+    
+            <!-- Fitur CRUD -->
+            <button class="btn-crud" id="save-score" onclick="saveScore()">Save Score</button>
+            <button class="btn-crud" id="show-scores" onclick="showScores()">Show Scores</button>
+            <button class="btn-crud" id="clear-scores" onclick="clearScores()">Clear Scores</button>
+            
+            <div id="score-list">
+                <h2>Saved Scores:</h2>
+                <ul id="scores"></ul>
+        </div>
+
+   
+    
+
+    </body>
     <script src="./index.js"></script>
-</body>
 </html>
