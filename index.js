@@ -1,16 +1,16 @@
-// Show login form and hide registration form
+// tampilkan login form and dan sembunyikan registration form
 function showLoginForm() {
     document.getElementById('login-box').style.display = 'block';
     document.getElementById('registration-box').style.display = 'none';
 }
 
-// Show registration form and hide login form
+// tampilkan registration form dan sembunyikan login form
 function showRegistrationForm() {
     document.getElementById('login-box').style.display = 'none';
     document.getElementById('registration-box').style.display = 'block';
 }
 
-// Validate Login
+// Validasi Login
 function validated() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -26,11 +26,11 @@ function validated() {
         sessionStorage.setItem("username", username);
 
         // Redirect to game page
-        window.location.href = 'main.html'; // Ensure this is your correct game page
-        return false; // Prevent form submission
+        window.location.href = 'main.html'; 
+        return false; // Mencegah pengiriman formulir
     } else {
         alert("Username atau Password salah!");
-        return false; // Prevent form submission
+        return false; //Mencegah pengiriman formulir
     }
 }
 // Register User
@@ -55,7 +55,7 @@ function registerUser() {
 
     alert("Pendaftaran berhasil! Silakan login.");
     showLoginForm(); // Switch to login form after successful registration
-    return false; // Prevent form submission
+    return false; // Mencegah pengiriman formulir
 }
 
 
