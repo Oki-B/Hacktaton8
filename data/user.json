@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "username": "raven_shadow",
+        "email": "raven.shadow@gamestudio.com",
+        "password": "hashed_password_123"
+    },    {
+        "id": 2,
+        "username": "kael_firestorm",
+        "email": "kael.firestorm@gamestudio.com",
+        "password": "hashed_password_456"
+      },
+      {
+        "id": 3,
+        "username": "luna_nightshade",
+        "email": "luna.nightshade@gamestudio.com",
+        "password": "hashed_password_789"
+      },
+      {
+        "id": 4,
+        "username": "drake_ember",
+        "email": "drake.ember@gamestudio.com",
+        "password": "hashed_password_321"
+      },
+      {
+        "id": 5,
+        "username": "ivy_storm",
+        "email": "ivy.storm@gamestudio.com",
+        "password": "hashed_password_654"
+      }
+  
+]
