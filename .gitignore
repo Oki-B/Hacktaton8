@@ -1,8 +1,10 @@
 node_modules
 
 npx sequelize model:create --name User --attributes username:string,email:string,password:string
-npx sequelize model:create --name Profile --attributes name:string,age:integer,phone_number:string,profile_picture:string
- npx sequelize migration:create --name AddUserId
+
+ npx sequelize migration:create --name AddColoumnRole
+
+
 
 
 
@@ -10,4 +12,5 @@ npx sequelize model:create --name Profile --attributes name:string,age:integer,p
 
  npx sequelize seed:generate --name seedUser
 	 npx sequelize seed:generate --name seedProfile
+	 npx sequelize seed:generate --name seedImg
 

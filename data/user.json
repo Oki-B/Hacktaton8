@@ -3,30 +3,41 @@
         "id": 1,
         "username": "raven_shadow",
         "email": "raven.shadow@gamestudio.com",
-        "password": "hashed_password_123"
-    },    {
+        "password": "hashed_password_123",
+        "role": "admin",
+        "ProfileId":1
+    },   
+     {
         "id": 2,
         "username": "kael_firestorm",
         "email": "kael.firestorm@gamestudio.com",
-        "password": "hashed_password_456"
+        "password": "hashed_password_456",
+         "role": "user",
+         "ProfileId":2
       },
       {
         "id": 3,
         "username": "luna_nightshade",
         "email": "luna.nightshade@gamestudio.com",
-        "password": "hashed_password_789"
+        "password": "hashed_password_789",
+         "role": "user",
+         "ProfileId":3
       },
       {
         "id": 4,
         "username": "drake_ember",
         "email": "drake.ember@gamestudio.com",
-        "password": "hashed_password_321"
+        "password": "hashed_password_321",
+         "role": "user",
+         "ProfileId":4
       },
       {
         "id": 5,
         "username": "ivy_storm",
         "email": "ivy.storm@gamestudio.com",
-        "password": "hashed_password_654"
+        "password": "hashed_password_654",
+         "role": "user",
+         "ProfileId":5
       }
   
 ]

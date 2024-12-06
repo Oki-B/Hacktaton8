@@ -4,39 +4,34 @@
       "name": "Raven Shadow",
       "age": 29,
       "phone_number": "08123456789",
-      "profile_picture": "https://images.unsplash.com/photo-1590608897129-b7b8f2f0a4a4?q=80",
-      "UserId":1
+      "profile_picture": "https://images.unsplash.com/photo-1590608897129-b7b8f2f0a4a4?q=80"
     },
     {
       "id": 2,
       "name": "Kael Firestorm",
       "age": 25,
       "phone_number": "08789995555",
-      "profile_picture": "https://images.unsplash.com/photo-1502764613149-7f1d229e230f?q=80",
-      "UserId":2
+      "profile_picture": "https://images.unsplash.com/photo-1502764613149-7f1d229e230f?q=80"
     },
     {
       "id": 3,
       "name": "Luna Nightshade",
       "age": 32,
       "phone_number": "08135555999",
-      "profile_picture": "https://images.unsplash.com/photo-1529626455611-4da17471b66d?q=80",
-      "UserId":3
+      "profile_picture": "https://images.unsplash.com/photo-1529626455611-4da17471b66d?q=80"
     },
     {
       "id": 4,
       "name": "Drake Ember",
       "age": 27,
       "phone_number": "08534455667",
-      "profile_picture": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80",
-      "UserId":4
+      "profile_picture": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80"
     },
     {
       "id": 5,
       "name": "Ivy Storm",
       "age": 30,
       "phone_number": "08598765432",
-      "profile_picture": "https://images.unsplash.com/photo-1529626454244-2d6a63189b8b?q=80",
-      "UserId":5
+      "profile_picture": "https://images.unsplash.com/photo-1529626454244-2d6a63189b8b?q=80"
     }
   ]

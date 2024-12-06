@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Profile.belongsTo(models.User,{ foreignKey: "UserId" })
+      Profile.hasOne(models.User)
     }
   }
   Profile.init({
@@ -64,13 +64,6 @@ module.exports = (sequelize, DataTypes) => {
         notNull:{
           msg:`Profile picture must be submitted`
         }
-      }
-    } ,
-    UserId:{
-      type:DataTypes.INTEGER,
-      references:{
-        model:'Users',
-        key:'id'
       }
     }
   }, {

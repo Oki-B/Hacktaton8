@@ -11,16 +11,77 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasOne(models.Profile,{ foreignKey: "UserId" })
+      User.belongsTo(models.Profile)
     }
   }
   User.init({
-    username: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
+    username:{
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notEmpty:{
+          msg: `Name is required`
+        },
+        notNull:{
+          msg:`Name must be submitted`
+        }
+      }
+    }, 
+    email:{
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notEmpty:{
+          msg: `Email is required`
+        },
+        notNull:{
+          msg:`Email must be submitted`
+        }
+      }
+    }, 
+    password: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notEmpty:{
+          msg: `Password is required`
+        },
+        notNull:{
+          msg:`Password must be submitted`
+        }
+      }
+    }, 
+    role: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notEmpty:{
+          msg: `Role is required`
+        },
+        notNull:{
+          msg:`Role must be submitted`
+        }
+      }
+    }, 
+    ProfileId:{
+      type: DataTypes.STRING,
+      references:{
+        model: 'Profiles',
+        key:'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'User',
+    hooks:{
+      beforeCreate(instance,options){
+        const salt = bcrypt.genSaltSync(10);
+        const hash = bcrypt.hashSync(instance.password, salt);
+        instance.password= hash
+
+        
+      }
+    }
   });
   return User;
 };
