@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/pages/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body onload="gameTik()">
+    <audio id="start-music" src="Subway_Surfers_Main_Theme_Song.ogg" preload="auto" hidden></audio>
+
+    <div class="background-image">
+        <img src="../assets" alt="awan" id="img-bottom">
+        <img src="../assets/images/awan_L.png" alt="awan-small" id="img-left">
+        <img src="../assets/images/awan_R.png" alt="awan-small" id="img-right">
+        <img src="../assets/images/daun_L.png" alt="daun-left" id="daun-left">
+        <img src="../assets/images/daun_R.png" alt="daun-right" id="daun-right">   
+    </div>
+    <div class="main-container">
+        <div class="header">
+            <div class="num-container">
+                <p class="title">SCORE</p>
+                <div class="num-board">
+                    <p class="counter" id="score-num">0</p>
+                </div>
+            </div>
+            <img src="../assets/images/title.png" alt="logo">
+            <div class="num-container">
+                <p class="title">TIME</p>
+                <div class="num-board">
+                    <p class="counter" id="time">60</p>
+                </div>
+            </div>
+        </div>
+        <div class="typing-board">
+            <div class="back-board">
+            </div>
+            <div class="front-board">
+                <img src="../assets/images/texture-wood.png" alt="wood-texture" id="texture-wood">
+            </div>
+            <div class="board">
+                <div class="word-board">
+                    <div class="outside-board">
+                        <div class="inside-board">
+                            <p id="question">HTML</p>
+                            <img class="baut left-top" src="../assets/images/baut.png" alt="">
+                            <img class="baut left-bottom" src="../assets/images/baut.png" alt="">
+                            <img class="baut right-top" src="../assets/images/baut.png" alt="">
+                            <img class="baut right-bottom" src="../assets/images/baut.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p id="instruction">Type the word above</p>
+                <div class="word-board">
+                    <input id="user-type" type="text" onkeydown="myFunction(event)" placeholder="type and press enter">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../scripts/index.js"></script>
+</body>
+</html>

@@ -29,10 +29,14 @@ function timedown() {
     if(j === 0) { 
         document.getElementById("time").innerHTML ="0"
         clearInterval(duration);
+        alert("Game Over!");
     }
 }
 
-function gameTik(){        
+let startMusic = document.getElementById("start-music");
+function gameTik(){     
+startMusic.play();
+
     if ( j > 0) {
        duration = setInterval(`timedown()`, 1000);
     }

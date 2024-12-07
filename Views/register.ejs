@@ -30,22 +30,30 @@
             <div class="front-board">
                 <div><img src="./assets/images/title.png" alt="" id="title"></div>
                 <div class="login-box" id="login-box">
-                    <h2>Login</h2>
-                    <form id="login-form" name="loginForm" action="/register" method="post">
+                    <h2>Add new Account</h2>
+                    <form action="/register" method="post">
                         <div class="input-group">
                             <label style="margin: 5px;" for="username">Username</label>
                             <input type="text" id="username" name="username" placeholder="Masukkan username">
+                            <% if (errors) { %>
+                                <span class="text-sm text-red-500 ml-2 " style="color: red;"><%= errors[0] %></span>
+                              <% } %>
                         </div>
                         <div class="input-group">
                             <label style="margin: 5px;" for="username">email</label>
                             <input type="text" id="username" name="email" placeholder="Masukkan email">
+                            <% if (errors) { %>
+                                <span class="text-sm text-red-500 ml-2" style="color: red;"><%= errors[1] %></span>
+                              <% } %>
                         </div>
                         <div class="input-group">
                             <label style="margin: 5px;;" for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Masukkan password"
-                                >
+                            <input type="password" id="password" name="password" placeholder="Masukkan password">
+                            <% if (errors) { %>
+                                <span class="text-sm text-red-500 ml-2" style="color: red;"><%= errors[2] %></span>
+                              <% } %>
                         </div>
-                        <button style="margin-bottom: 10px;" type="submit" id="button-login">Add new account</button>
+                        <button style="margin-bottom: 10px;" type="submit" >Add new account</button>
                         
             
                     </form>
