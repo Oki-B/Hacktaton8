@@ -122,6 +122,12 @@ margin-bottom: 0;
     border-radius: 10px;
 }
 
+.title{
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+
 .profil-pic {
     width: 60px;
     height: 60px;
