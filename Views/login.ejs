@@ -31,6 +31,9 @@
                 <div><img src="./assets/images/title.png" alt="" id="title"></div>
                 <div class="login-box" id="login-box">
                     <h2>Login</h2>
+                     <% if (error) { %>
+                                <span class="text-sm text-red-500 ml-2 " style="color: red;"><%= error %></span>
+                              <% } %>
                     <form id="login-form" name="loginForm"  action="/login" method="post">
                         <div class="input-group">
                             <label style="margin: 5px;" for="username">Username</label>
