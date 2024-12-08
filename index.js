@@ -33,7 +33,7 @@ function timedown() {
         startMusic.pause();
         startMusic.currentTime = 0; 
         alert("Waktu Habis! Skor Anda: " + document.querySelector(`#score-num`).innerText);
-        // location.reload(); buat refresh halaman ketika alert muncul
+        //  location.reload(); //buat refresh halaman ketika alert muncul
     }
 }
 
