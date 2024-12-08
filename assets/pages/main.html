@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body onload="gameTik()">
+<body>
+    <audio id="start-music" src="../audio/Subway_Surfers_Main_Theme_Song.ogg" preload="auto"></audio>
     <div class="background-image">
         <img src="../images/awan_btm.png" alt="awan" id="img-bottom">
         <img src="../images/awan_L.png" alt="awan-small" id="img-left">
@@ -55,6 +56,8 @@
                 <div class="word-board">
                     <input id="user-type" type="text" onkeydown="myFunction(event)" placeholder="type and press enter">
                 </div>
+        <button  id="start-game" onclick="gameTik()" class="play-btn">START GAME</button>
+
             </div>
         </div>
     </div>

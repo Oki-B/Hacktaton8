@@ -18,6 +18,7 @@ function randomQuestion () {
 
 
 
+let startMusic = document.getElementById("start-music");
 // Set-Up Game Duration
 
 let j = 60;
@@ -27,12 +28,18 @@ function timedown() {
   document.querySelector("#time").innerText = j;
    
     if(j === 0) { 
-        document.getElementById("time").innerHTML ="0"
+        // document.getElementById("time").innerHTML ="0"
         clearInterval(duration);
+        startMusic.pause();
+        startMusic.currentTime = 0; 
+        alert("Waktu Habis! Skor Anda: " + document.querySelector(`#score-num`).innerText);
+        // location.reload(); buat refresh halaman ketika alert muncul
     }
 }
 
 function gameTik(){        
+     document.getElementById("start-game").style.display = "none";
+    startMusic.play();
     if ( j > 0) {
        duration = setInterval(`timedown()`, 1000);
     }

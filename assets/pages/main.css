@@ -220,3 +220,13 @@ body {
     margin-top: 5px;
     text-shadow: 1px 4px #5b0e1172;
 }
+
+.play-btn {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background: linear-gradient(0deg, #93e0efbe, #0dc5eae2, #11d4fbea);
+    color: #932c11;
+    font-weight: 700;
+    border-radius: 10px;
+}

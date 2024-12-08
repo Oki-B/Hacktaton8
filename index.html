@@ -37,6 +37,7 @@
                 <!-- Login Form -->
                 <div id="login-form" onsubmit="return validated()">
                     <h1 class="title">Login</h1>
+
                     <form action="#" method="post">
                         <div style="margin: 20px;">
                             <label style="color: black;">Username</label>
@@ -115,9 +116,8 @@
                             </label>
                         </div>
 
-                        <button class="play-btn" type="submit">Create account</button>
-                        <span style="color: black;">Sudah punya akun? <a href="#" onclick="showLoginForm()"
-                                style="color: blue; text-decoration: underline;">Login</a></span>
+                        <button class="play-btn" type="submit">SIGN UP</button>
+                        <p style="color: blue; text-align: center;"><a href="#" onclick="showLoginForm()" style="color: blue; text-decoration: underline;">Login</a></p>
                     </form>
                 </div>
 
@@ -193,7 +193,7 @@
 
 
         // Register User
-        function registerUser() {
+        function registerUser(event) {
             event.preventDefault();
             const username = document.getElementById("reg-username").value;
             const imageUrl = document.getElementById("reg-imageUrl").value;
