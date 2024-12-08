@@ -117,7 +117,8 @@
                         </div>
 
                         <button class="play-btn" type="submit">SIGN UP</button>
-                        <p style="color: blue; text-align: center;"><a href="#" onclick="showLoginForm()" style="color: blue; text-decoration: underline;">Login</a></p>
+                        <p style="color: blue; text-align: center;"><a href="#" onclick="showLoginForm()"
+                                style="color: blue; text-decoration: underline;">Login</a></p>
                     </form>
                 </div>
 
@@ -179,13 +180,13 @@
             const user = users.find(user => user.username === username && user.password === password);
 
             if (user) {
-                // Save the username to sessionStorage for session persistence
+                // save username ke session biar ga cape bulak balik login
                 sessionStorage.setItem("username", username);
                 
                 window.location.href = './assets/pages/main.html';
                 return false; // Mencegah pengiriman form
             } else {
-                alert("Username atau Password salah!");
+                alert("Username or Password is inccorect!");
                 return false; //Mencegah pengiriman form
             }
         }
@@ -202,7 +203,7 @@
             const users = JSON.parse(localStorage.getItem("users")) || [];
 
             if (users.some(user => user.username === username)) {
-                alert("Username sudah terdaftar!");
+                alert("Username is already exists!");
                 return false;
             }
 
@@ -211,7 +212,7 @@
             // Save updated users array to localStorage
             localStorage.setItem("users", JSON.stringify(users));
 
-            alert("Pendaftaran berhasil! Silakan login.");
+            alert("Registration successful! Please login");
             showLoginForm(); // Switch to login form after successful registration
             return false; // Mencegah pengiriman formulir
         }
