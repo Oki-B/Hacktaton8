@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="background-image">
+        <img src="../images/awan_btm.png" alt="awan" id="img-bottom">
+        <img src="../images/awan_L.png" alt="awan-small" id="img-left">
+        <img src="../images/awan_R.png" alt="awan-small" id="img-right">
+        <img src="../images/daun_L.png" alt="daun-left" id="daun-left">
+        <img src="../images/daun_R.png" alt="daun-right" id="daun-right">   
+    </div>
+    
+    
+    <div class="main-container">
+
+        <!-- ini div untuk Log-in/Registrasi/Profile -->
+        <div class="login-board">
+            <div class="back-board">
+            </div>
+            <div class="front-board" id="profile">
+                <div id="title">
+                    <img src="../images/title.png" alt="" >
+                </div>
+
+                <div class="card w-[320px] bg-orange-700 bg-opacity-20 px-10 py-4 shadow gap-2 items-center" style="position: relative; top: -50px;">
+
+                    <div class="avatar">
+                        <div class="mask mask-squircle w-40">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuL6TBF6f4OmR3C6yj7pffvMkM13n9j6Prpg&s" />
+                        </div>
+                      </div>
+
+                      <div class="w-full flex flex-col gap-2">
+                        <h2>Username</h2>
+                        <p>Player Highest Score : </p>
+                        <p>125 pts</p>
+                        
+                        <button class="btn btn-neutral btn-sm">Edit Profile</button>
+
+                      </div>
+                </div>
+
+                <a href="./main.html"><button type="button" class=" btn mb-4 btn-info w-[200px] shadow">PLAY GAME</button></a>
+                <a href="../../index.html"><button type="button" class=" btn btn-error w-[200px] shadow">EXIT</button></a> 
+            </div>
+
+        </div>
+
+        <!-- ini div untuk top - score -->
+        <div class="score-board">
+            <div class="outer-board">
+                <div class="inner-board">
+                    <h1 class="text-3xl mt-6 mb-4" >TOP SCORE</h1>
+                    <div id="leader_board">
+                        <div class="top-scorer">
+                            <p>1.</p>
+                            <img class="profil-pic" style="object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuL6TBF6f4OmR3C6yj7pffvMkM13n9j6Prpg&s" alt="">
+                            <div>
+                                <p style="color: #d66b11;">Sodikin</p>
+                                <p class="text-md text-neutral">Score : <span class=" text-xl">150 pts</span></p>
+                            </div>
+                        </div>
+                        <div class="top-scorer">
+                            <p>2.</p>
+                            <img class="profil-pic" src="../images/bg.jpg" alt="">
+                            <p>NAMA PLAYER</p>
+                        </div>
+                        <div class="top-scorer">
+                            <p>3.</p>
+                            <img class="profil-pic" src="../images/bg.jpg" alt="">
+                            <p>NAMA PLAYER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../index.js"></script>
+</body>
+</html>
