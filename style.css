@@ -67,6 +67,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    color: #72220e;
+    text-shadow: 0.5px 0.2px white;
 }
 
 .login-board {
@@ -107,7 +110,7 @@ body {
 
 #title {
 position: relative;
-top: -80px;
+top: -100px;
 width: 320px;
 margin-bottom: 0;
 }

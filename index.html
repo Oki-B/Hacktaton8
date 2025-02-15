@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,25 +19,55 @@
     
     
     <div class="main-container">
+
+        <!-- ini div untuk Log-in/Registrasi/Profile -->
         <div class="login-board">
             <div class="back-board">
             </div>
-            <div class="front-board">
+            <div class="front-board" id="homepage-form">
                 <div><img src="./assets/images/title.png" alt="" id="title"></div>
-                <h1>LOGIN</h1>
-                <a href="./assets/pages/main.html"><button id="play-btn">PLAY GAME</button></a>
-            </div>
+                <h1 class="text-2xl mb-2">LOGIN</h1>
+                <!-- <a href="./assets/pages/main.html"><button id="play-btn">PLAY GAME</button></a>  -->
+                <label class="form-control w-full max-w-xs" id="username">
+                    <div class="label" style="display: flex; flex-direction: column; align-items: start;">
+                      <span class="label-text text-md text-neutral">Your Username?</span>
+                    </div>
+                    <input required type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs text-white" />
+                </label>
 
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                      <span class="label-text text-md text-neutral">Your password?</span>
+                    </div>
+                    <input required type="password" placeholder="Type here" class="input input-bordered w-full max-w-xs text-white" />
+                </label>
+
+                <a href="./assets/pages/profile.html"><button type="button" class="mt-6" id="play-btn" style="text-shadow: 0.5px 0.2px white;">SIGN IN</button></a> 
+
+                <div class="flex items-center justify-between mt-4">
+                    <p class="text-sm text-neutral">
+                      No account?  
+                      <button onclick="showRegister()" style="margin-left: 5px; text-shadow: 0.5px 0.2px white;" class="text-sm underline"> 
+                        Sign up
+                    </button>
+                    </p>
+                </div>
+            </div>
         </div>
+
+        <!-- ini div untuk top - score -->
         <div class="score-board">
             <div class="outer-board">
                 <div class="inner-board">
-                    <h1>TOP SCORE</h1>
-                    <div>
+                    <h1 class="text-3xl mt-6 mb-4" >TOP SCORE</h1>
+                    <div id="leader_board">
                         <div class="top-scorer">
                             <p>1.</p>
-                            <img class="profil-pic" src="./assets/images/bg.jpg" alt="">
-                            <p>NAMA PLAYER</p>
+                            <img class="profil-pic" style="object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuL6TBF6f4OmR3C6yj7pffvMkM13n9j6Prpg&s" alt="">
+                            <div>
+                                <p style="color: #d66b11;">Sodikin</p>
+                                <p class="text-md text-neutral">Score : <span class=" text-xl">150 pts</span></p>
+                            </div>
                         </div>
                         <div class="top-scorer">
                             <p>2.</p>
@@ -52,6 +84,13 @@
             </div>
         </div>
     </div>
+
+
+    <footer class="footer footer-center bg-base-300 text-base-content p-4" style="position: sticky;">
+        <aside>
+          <p>Copyright © 2024 - All right reserved by HackTyping</p>
+        </aside>
+    </footer>
 
     <script src="./index.js"></script>
 </body>
